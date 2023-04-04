@@ -19,8 +19,9 @@ runs:
       shell: bash
     - name: pass inputs to shell
       run:
-        echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_
+        echo "INPUT_NUM=${{ inputs.num }}" >> $GITHUB_ENV
       shell: bash
     - name: fetch the number' square
       id: get-square
-      run: python src/get_num
+      run: python src/get_num_square.py
+      shell: bash
