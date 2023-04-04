@@ -7,11 +7,11 @@ jobs:
     name: return the number square
     steps:
       -name: Checkout
-        uses: action/checkout@v2
+       uses: action/checkout@v2
       -name: fetch nem squared
        id: get_square
        uses: ./
        with:
         num: 11
-       -name: print the square
+      -name: print the square
        run: echo "${{ steps.get_square.outputs.num_squared }}"
